@@ -73,7 +73,7 @@ function TaskItem({ task, toggleTask, deleteTask, editingId, editText, setEditTe
                 {task.text}
               </div>
               <div style={{ fontSize: "10px", color: colors.muted, marginTop: "4px" }}>
-                {task.createdAt ? formatDistanceToNow(new Date(task.createdAt), { addSuffix: true, locale: az }) : "az öncə"}
+                {task.createdAt ? formatDistanceToNow(new Date(task.createdAt), { addSuffix: true }) : "just now"}
               </div>
             </>
           )}

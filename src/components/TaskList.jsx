@@ -6,7 +6,6 @@ import { formatDistanceToNow } from "date-fns";
 import { az } from "date-fns/locale";
 import { GripVertical, Trash2, Edit3, CheckCircle2, Circle } from "lucide-react";
 
-// Hər bir Task üçün ayrı Sürüklənə bilən Komponent
 function SortableTaskItem({
   task,
   toggleTask,
@@ -110,7 +109,7 @@ function SortableTaskItem({
               </div>
               {/* Vaxt göstəricisi */}
               <div style={{ fontSize: "10px", color: colors.muted, marginTop: "2px" }}>
-                {task.createdAt ? formatDistanceToNow(new Date(task.createdAt), { addSuffix: true, locale: az }) : "az öncə"}
+                {task.createdAt ? formatDistanceToNow(new Date(task.createdAt), { addSuffix: true }) : "just now"}
               </div>
             </div>
 
